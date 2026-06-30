@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"></meta>
+<title>DOM learning</title>
+</head>
+<body>
+<ul class="language">
+    <li>Javascript</li>
+</ul>
+</body>
+<script>
+    function addLanguage(langName){
+        const list= document.createElement('li')
+        list.innerHTML = `${langName}`
+        document.querySelector('.language')
+        appendchild(list)
+    }
+    addLanguage('java')
+    addLanguage('ruby')
+
+    function addOptimizeLanguage(langName) {
+        const list= document.createElement('li')
+        list.appendchild(document.createTextNode(langName))
+        document.querySelector('.language')
+        appendchild(list)
+    }
+    addOptimizeLanguage('c++')
+
+    // Edit
+    const liElement = document.querySelector('li:nth-child(2)')
+    const newElement = document.createElement('li')
+    newElement.textContent = "Mojo"
+    liElement.replaceWith(newElement)
+
+    // Edit
+    const firstLang = document.querySelector('li:first-child')
+    firstLang.outerHTML = '<li>Angular</li>'
+
+    // remove.
+    const lastChild = document.querySelector('li:last-child')
+    lastChild.remove()
+</script>
+</html>

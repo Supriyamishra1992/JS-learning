@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"></meta>
+<title>DOM learning</title>
+</head>
+<body>
+<div class="bg-black">
+<h1 id="title" class="heading">DOM learning with chai aur code</h1>
+<p>This is my JS learning course.</p>
+</div>
+<ul>
+    <li class="list-item">green</li>
+    <li class="list-item">blue</li>
+    <li class="list-item">red</li>
+</ul>
+</body>
+</html>
+
+<!--
+innerText --- gives only those content which is visible
+textContent ---- gives all content, if something is hidden by CSS
+innerHtml --- gives contnet in html tags if any one is there
+document.querySelector('h2')
+document.querySelector('#title')
+document.querySelector('.heading')
+document.querySelector('input["password"]')
+const ulList = document.querySelector('ul')
+const liChange = ulList.querySelector('li')
+liChange.style.backgroundColor = "green"
+
+querySelectorAll() -- nodeList
+const listItems = document.querySelectorAll('li')
+listItems[0].style.color = 'green'
+listItems.forEach((item) => {
+    item.style.color = "blue"
+})
+
+getElementByClassName() --- htmlcollection
+const listCollection = document.getElementsByClassName('list-item')
+const listCollectionArr = Array.from(listCollection)
+listCollectionArr.forEach((item) => {
+    item.style.color = 'pink'
+})
+-->

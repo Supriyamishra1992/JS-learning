@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"></meta>
+<title>DOM learning</title>
+</head>
+<body>
+
+</body>
+<script>
+    const divElement = document.createElement('div')
+    console.log(divElement)
+    divElement.className = "divclass"
+    divElement.id = "divid"
+    divElement.setAttribute("title", "chai and code")
+    //div.innertext = "my first node created"
+    const addTextNode = document.createTextNode("chai aur coffee")
+    divElement.appendChild(addTextNode)
+    document.body.appendChild(divElement)
+</script>
+</html>
+
